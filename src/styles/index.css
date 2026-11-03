@@ -338,3 +338,26 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   Header Navigation Responsive Display
+   Desktop (full view): Hamburger hidden, desktop links visible
+   Mobile (<= 860px): Hamburger visible, desktop links hidden
+   ========================================================================== */
+.mobile-menu-trigger {
+  display: none !important;
+}
+
+.desktop-nav {
+  display: flex !important;
+}
+
+@media (max-width: 860px) {
+  .mobile-menu-trigger {
+    display: flex !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+}
+

@@ -12,8 +12,17 @@ export default function Header({ activeSection, onNavigate }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
+    const handleResize = () => {
+      if (window.innerWidth > 860) {
+        setIsMobileMenuOpen(false);
+      }
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleLinkClick = (e, sectionId) => {
@@ -31,6 +40,22 @@ export default function Header({ activeSection, onNavigate }) {
 
   return (
     <>
+      <style>{`
+        .mobile-menu-trigger {
+          display: none !important;
+        }
+        .desktop-nav {
+          display: flex !important;
+        }
+        @media (max-width: 860px) {
+          .mobile-menu-trigger {
+            display: flex !important;
+          }
+          .desktop-nav {
+            display: none !important;
+          }
+        }
+      `}</style>
       <header
         style={{
           position: 'fixed',
@@ -61,16 +86,16 @@ export default function Header({ activeSection, onNavigate }) {
             width: '100%'
           }}
         >
-          {/* Left: 3-line editorial menu trigger & CRAVE IT typographic logo */}
+          {/* Left: 3-line editorial menu trigger (Mobile only) & CRAVE IT typographic logo */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="mobile-menu-trigger"
               style={{
                 background: 'none',
                 border: 'none',
                 color: 'var(--text-primary)',
                 cursor: 'pointer',
-                display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 gap: '5px',
@@ -117,7 +142,7 @@ export default function Header({ activeSection, onNavigate }) {
           </div>
 
           {/* Center: Desktop Editorial Nav Links */}
-          <nav className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
+          <nav className="desktop-nav" style={{ alignItems: 'center', gap: '2.5rem' }}>
             {SITE_CONFIG.navLinks.map(link => {
               const isActive = activeSection === link.id;
               return (

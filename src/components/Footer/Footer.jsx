@@ -122,20 +122,7 @@ export default function Footer({ onNavigate }) {
               Rolls, Momos, Chinese, and Rice & Noodles.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span
-                style={{
-                  width: '9px',
-                  height: '9px',
-                  borderRadius: '50%',
-                  backgroundColor: '#22C55E',
-                  boxShadow: '0 0 10px #22C55E'
-                }}
-              />
-              <span style={{ fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.06em', color: '#22C55E' }}>
-                KITCHEN OPEN NOW • LIVE WOK READY
-              </span>
-            </div>
+            
           </div>
 
           {/* Col 2: Navigation Links */}
