@@ -76,28 +76,7 @@ export default function ProductCard({ product }) {
           </span>
         </div>
 
-        {product.featured && (
-          <span
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '4px',
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.65rem',
-              fontWeight: 800,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              backgroundColor: 'var(--accent-orange)',
-              color: '#FFF',
-              padding: '3px 8px',
-              borderRadius: 'var(--radius-pill)',
-              boxShadow: '0 4px 10px rgba(255, 100, 30, 0.35)'
-            }}
-          >
-            <Sparkles size={11} />
-            CHEF PICK
-          </span>
-        )}
+        
       </div>
 
       {/* Floating Center Food Cutout Image with Dynamic Scale & Rotation on Hover */}

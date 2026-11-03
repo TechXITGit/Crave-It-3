@@ -92,20 +92,7 @@ export default function Footer({ onNavigate }) {
               >
                 CRAVE<span style={{ color: 'var(--accent-orange)' }}>IT</span>
               </span>
-              <span
-                style={{
-                  fontSize: '0.65rem',
-                  fontWeight: 800,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.2em',
-                  backgroundColor: 'rgba(255, 255, 255, 0.12)',
-                  color: 'var(--accent-orange)',
-                  padding: '3px 8px',
-                  borderRadius: '4px'
-                }}
-              >
-                DESIGN 03
-              </span>
+             
             </div>
 
             <p

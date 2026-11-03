@@ -39,31 +39,7 @@ export default function FinalCTA({ onExploreMenu }) {
           margin: '0 auto'
         }}
       >
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            backgroundColor: 'rgba(49, 10, 62, 0.08)',
-            padding: '6px 16px',
-            borderRadius: 'var(--radius-pill)',
-            marginBottom: '1.5rem'
-          }}
-        >
-          <Sparkles size={14} color="var(--accent-orange)" />
-          <span
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.78rem',
-              fontWeight: 800,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: 'var(--text-primary)'
-            }}
-          >
-            ORDER DIRECT • LIVE KITCHEN
-          </span>
-        </div>
+       
 
         <h2
           style={{

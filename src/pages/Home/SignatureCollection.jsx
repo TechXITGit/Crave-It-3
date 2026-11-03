@@ -36,31 +36,7 @@ export default function SignatureCollection() {
             margin: '0 auto clamp(3rem, 6vw, 5rem)'
           }}
         >
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: 'rgba(49, 10, 62, 0.08)',
-              padding: '6px 16px',
-              borderRadius: 'var(--radius-pill)',
-              marginBottom: '1rem'
-            }}
-          >
-            <Sparkles size={14} color="var(--accent-orange)" />
-            <span
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.75rem',
-                fontWeight: 800,
-                letterSpacing: '0.18em',
-                textTransform: 'uppercase',
-                color: 'var(--text-primary)'
-              }}
-            >
-              SECTION 03 • EDITORIAL COLLECTION
-            </span>
-          </div>
+         
 
           <h2
             style={{
